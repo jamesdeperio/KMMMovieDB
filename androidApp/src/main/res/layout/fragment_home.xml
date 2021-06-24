@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.feature.home.HomeFragment">
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/ivBanner"
+        android:layout_height="170dp"/>
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:padding="16dp"
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+      <TextView
+          android:layout_width="match_parent"
+          android:textStyle="bold"
+          android:textSize="40dp"
+          android:text="@string/welcome"
+          android:textColor="@color/white"
+          android:layout_height="wrap_content"/>
+      <TextView
+          android:textColor="@color/white"
+          android:layout_width="match_parent"
+          android:textStyle="bold"
+          android:textSize="20dp"
+          android:text="@string/millions_of_movies_tv_shows_and_people_to_discover_explore_now"
+          android:layout_height="wrap_content"
+          tools:ignore="SpUsage" />
+    </LinearLayout>
+  </FrameLayout>
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+
+      android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+      <Space
+          android:layout_width="match_parent"
+          android:layout_height="155dp"/>
+      <LinearLayout
+          android:background="@drawable/drawable_white_rounded_top"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <!-- POPULAR -->
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/what_s_popular"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            tools:ignore="SpUsage" />
+
+        <com.github.jamesdeperio.moviedb.android.ui.base.TabNavigationView
+            android:layout_width="wrap_content"
+            android:id="@+id/tnPopular"
+            android:layout_gravity="start"
+            android:layout_margin="16dp"
+            app:containerBackground="@drawable/drawable_nav_tab"
+            app:selectedBackground="@drawable/drawable_nav_tab_selected"
+            app:selectedTextColor="@color/white"
+            app:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/rv_popular_item"/>
+
+        <!-- TOP RATED -->
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/top_rated"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            tools:ignore="SpUsage" />
+
+        <com.github.jamesdeperio.moviedb.android.ui.base.TabNavigationView
+            android:layout_width="wrap_content"
+            android:id="@+id/tnTopRated"
+            android:layout_gravity="start"
+            android:layout_margin="16dp"
+            app:containerBackground="@drawable/drawable_nav_tab"
+            app:selectedBackground="@drawable/drawable_nav_tab_selected"
+            app:selectedTextColor="@color/white"
+            app:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/rv_top_rated_item"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content">
+          <!-- MORE -->
+          <TextView
+              android:layout_marginTop="16dp"
+              android:layout_width="match_parent"
+              android:textSize="20dp"
+              android:paddingStart="16dp"
+              android:paddingEnd="16dp"
+              android:text="@string/more_movies_and_tv_shows"
+              android:textColor="@color/white"
+              android:layout_height="wrap_content"
+              tools:ignore="SpUsage" />
+
+          <com.github.jamesdeperio.moviedb.android.ui.base.TabNavigationView
+              android:layout_width="wrap_content"
+              android:id="@+id/tnMore"
+              android:layout_gravity="start"
+              android:layout_margin="16dp"
+              app:containerBackground="@drawable/drawable_nav_tab"
+              app:selectedBackground="@drawable/drawable_nav_tab_selected"
+              app:selectedTextColor="@color/white"
+              app:textColor="@color/colorPrimaryDark"
+              android:layout_height="wrap_content"/>
+          <androidx.recyclerview.widget.RecyclerView
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:layout_marginBottom="20dp"
+              android:id="@+id/rv_more_item"/>
+        </LinearLayout>
+
+        <!-- TRENDING -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <ImageView
+
+              android:layout_marginTop="50dp"
+              android:id="@+id/ivTrending"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:scaleX="3"
+              android:scaleY="13"/>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="wrap_content">
+            <TextView
+                android:translationZ="90dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:textSize="20dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/trending"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                tools:ignore="SpUsage" />
+
+            <com.github.jamesdeperio.moviedb.android.ui.base.TabNavigationView
+                android:layout_width="wrap_content"
+                android:id="@+id/tnTrending"
+                android:layout_gravity="start"
+                android:layout_margin="16dp"
+                app:containerBackground="@drawable/drawable_nav_tab"
+                app:selectedBackground="@drawable/drawable_nav_tab_selected"
+                app:selectedTextColor="@color/white"
+                app:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/rv_trending_item"/>
+
+          </LinearLayout>
+        </FrameLayout>
+
+
+      </LinearLayout>
+
+      <FrameLayout
+          android:background="@color/colorPrimaryDark"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:id="@+id/ivFooterLogo"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:paddingTop="36dp"
+            android:layout_width="wrap_content"
+            android:textSize="10dp"
+            android:layout_gravity="end|bottom"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/github"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText,SpUsage" />
+
+
+      </FrameLayout>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+
+
+</FrameLayout>

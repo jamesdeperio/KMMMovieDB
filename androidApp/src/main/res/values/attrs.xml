@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabNavigationView">
+        <attr name="selectedBackground" format="reference"/>
+        <attr name="containerBackground" format="reference"/>
+        <attr name="selectedTextColor" format="color"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+</resources>

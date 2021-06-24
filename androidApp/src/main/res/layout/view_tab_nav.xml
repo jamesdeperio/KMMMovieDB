@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/drawable_nav_tab"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/tabContainer"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+</LinearLayout>

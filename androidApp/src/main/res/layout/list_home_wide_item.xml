@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="0dp"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMovie"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="1dp"
+        android:layout_marginBottom="50dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="15dp"
+        android:layout_height="250dp">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/loaderPoster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:focusable="true"
+                android:clickable="true"
+                android:background="#919191"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/ivPoster"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="30dp"
+        android:translationZ="200dp"
+        android:layout_gravity="start|bottom"
+        android:background="@drawable/shape_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/pbVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorSize="40dp"
+            android:indeterminate="false"
+            android:background="@drawable/shape_ring"
+            style="@style/Widget.MaterialComponents.CircularProgressIndicator"
+            android:max="100"
+            android:progress="75" />
+        <TextView
+            android:id="@+id/tvVote"
+            android:layout_width="match_parent"
+            android:textSize="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="99"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            tools:ignore="SpUsage" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_gravity="bottom|center"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="15dp"
+        android:id="@+id/tvTitle"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        tools:ignore="SpUsage" />
+
+</FrameLayout>

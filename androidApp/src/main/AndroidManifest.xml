@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.github.jamesdeperio.moviedb.android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@mipmap/mdb"
+        android:roundIcon="@mipmap/mdb"
+        android:name=".app.MainApplication"
+        android:allowBackup="false"
+        android:label="@string/appName"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="MissingApplicationIcon">
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.MainActivity"
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
