@@ -1,7 +1,7 @@
 # KMMMovieDB
 using kotlin multiplatform mobile
 
-[![Watch the video](https://github.com/jamesdeperio/KMMMovieDB/blob/master/kmmmdb.webm)]
+[![PREVIEW](https://github.com/jamesdeperio/KMMMovieDB/blob/master/kmmmoviedb.gif)]
 ### TODO
 
 - [x] Create common api calls
