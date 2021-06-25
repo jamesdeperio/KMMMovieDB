@@ -12,3 +12,6 @@ using kotlin multiplatform mobile
 - [ ] iOS Detail Page
 - [ ] Create new branch and migrate to Jetpack Compose
 - [ ] Create new branch and migrate to SwiftUI
+- [ ] Integrate SQLDelighter Multiplatform lib
+- [ ] Integrate SharedPreference Multiplatform lib
+
