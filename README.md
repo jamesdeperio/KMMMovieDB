@@ -1,7 +1,7 @@
 # KMMMovieDB
 using kotlin multiplatform mobile
 
-![APK](https://github.com/jamesdeperio/KMMMovieDB/blob/master/androidApp-debug.apk)
+[![APK](https://github.com/jamesdeperio/KMMMovieDB/blob/master/androidApp-debug.apk)https://github.com/jamesdeperio/KMMMovieDB/blob/master/androidApp-debug.apk]
 ![PREVIEW](https://github.com/jamesdeperio/KMMMovieDB/blob/master/kmmmoviedb.gif)
 ### TODO
 
