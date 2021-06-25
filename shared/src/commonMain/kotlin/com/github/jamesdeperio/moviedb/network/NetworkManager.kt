@@ -11,6 +11,9 @@ import io.ktor.client.features.logging.*
 import io.ktor.client.features.observer.*
 import io.ktor.client.request.*
 import io.ktor.http.*
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlin.native.concurrent.SharedImmutable
+
 
 class NetworkManager {
     companion object {

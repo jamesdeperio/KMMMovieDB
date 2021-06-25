@@ -1,10 +1,14 @@
 package com.github.jamesdeperio.moviedb.viewmodel.home
 
+import com.github.jamesdeperio.moviedb.ApplicationDispatcher
 import com.github.jamesdeperio.moviedb.model.domain.trending.Trending
 import com.github.jamesdeperio.moviedb.model.ui.HomeItem
 import com.github.jamesdeperio.moviedb.network.service.RestService
 import com.github.jamesdeperio.moviedb.viewmodel.ViewStateObserver
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class HomeViewModel(
     private val restService: RestService,
@@ -13,7 +17,7 @@ class HomeViewModel(
 
     //region VARIABLES
     private val job = Job()
-    private val uiScope = CoroutineScope(Dispatchers.Main + job)
+    private val uiScope = CoroutineScope(ApplicationDispatcher + job)
 
     //endregion
 
@@ -38,6 +42,7 @@ class HomeViewModel(
                 }
             }
             task.await()
+            //httpClient.close()
             observer.onObserve(
                 if (throwable!=null) HomeState.FailedLoadPopularItem(throwable!!)
                 else HomeState.LoadPopularItem(items)
