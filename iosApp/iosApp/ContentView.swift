@@ -3,27 +3,46 @@ import shared
 
 struct ContentView: View{
   
-    var networkManager = NetworkManager()
+
+    @ObservedObject var viewModel = Sample()
     
     init() {
         stepCount()
     }
     var body: some View {
       
-        Text("hello")
+        VStack {
+                   Button(action: {
+                    viewModel.registerRequest()
+                   }) {
+                       Text("SignUp")
+                   }
+                   Text(viewModel.textToUpdate)
+               }
         
     }
-    func stepCount() {
-        var viewModel = HomeViewModel(restService: networkManager.restService, observer:Sample())
+     func stepCount() {
         
+    
         
     }
     
 }
 
-class Sample: ViewStateObserver {
+class Sample: ViewStateObserver,ObservableObject {
+    @Published var textToUpdate: String = "Update me!"
     func onObserve(i: Any?) {
+        print(i)
+        if (i is HomeState.LoadPopularItem) {
+            textToUpdate = i as! String
+        }
+    }
+    func registerRequest(){
+        let networkManager = NetworkManager()
+        let hvm = HomeViewModel(restService: networkManager.restService, observer:self)
         
+        hvm.loadPopularTV()
+      
     }
     
    

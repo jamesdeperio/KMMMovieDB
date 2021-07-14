@@ -18,14 +18,14 @@ class RestRepository(private val networkManager: NetworkManager) {
 
     //region POPULAR ITEM
     suspend fun getPopularTheater (): APIResponse<PopularMovieData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/popular?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/popular?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
         }
 
     suspend fun getPopularTV (): APIResponse<PopularTVData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/popular?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/popular?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
@@ -36,14 +36,14 @@ class RestRepository(private val networkManager: NetworkManager) {
 
     //region TOP RATED ITEM
     suspend fun getTopRatedTV(): APIResponse<TopRatedTVData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/top_rated?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/top_rated?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
         }
 
     suspend fun getTopRatedMovie(): APIResponse<TopRatedMovieData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/top_rated?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/top_rated?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
@@ -52,28 +52,28 @@ class RestRepository(private val networkManager: NetworkManager) {
 
     //region MORE MOVIES AND TV SHOW
     suspend fun getNowPlayingMovie(): APIResponse< NowPlayingMovieData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/now_playing?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/now_playing?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
         }
 
     suspend fun getUpcomingMovie(): APIResponse< UpcomingMovieData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/upcoming?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/movie/upcoming?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
         }
 
     suspend fun getAiringTodayTV(): APIResponse< AiringTodayData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/airing_today?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/airing_today?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
         }
 
     suspend fun getOntheAirTV(): APIResponse<OnTheAirData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/on_the_air?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/tv/on_the_air?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }
@@ -82,7 +82,7 @@ class RestRepository(private val networkManager: NetworkManager) {
 
     //region Trending
     suspend fun getTrending(trending: Trending): APIResponse<TrendingData> =
-        networkManager.httpClient.get("${NetworkManager.BASE_URL}/3/trending/all/${trending.name}?api_key=${NetworkManager.API_KEY}&language=en-US") {
+         NetworkManager.httpClient.get("${NetworkManager.BASE_URL}/3/trending/all/${trending.name}?api_key=${NetworkManager.API_KEY}&language=en-US") {
             headers {
                 networkManager.setupSecurityHeader(this)
             }

@@ -1,5 +1,5 @@
 buildscript {
-    val kotlin_version by extra("1.4.31")
+    val kotlin_version by extra("1.5.10")
     repositories {
         gradlePluginPortal()
         jcenter()
@@ -7,9 +7,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0")
-        classpath("com.android.tools.build:gradle:4.2.1")
-        val kotlinVersion = "1.5.0"
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10")
+        classpath("com.android.tools.build:gradle:4.2.2")
+        val kotlinVersion = "1.5.10"
         classpath(kotlin("gradle-plugin", version = kotlinVersion))
         classpath(kotlin("serialization", version = kotlinVersion))
     }
@@ -22,11 +22,7 @@ allprojects {
         mavenCentral()
 
     }
-    configurations.all {
-        resolutionStrategy {
-            force("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2-native-mt")
-        }
-    }
+
 }
 
 tasks.register("clean", Delete::class) {

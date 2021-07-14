@@ -12,7 +12,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.3.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+  //  implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
     implementation("androidx.fragment:fragment-ktx:1.3.5")
 
     //dagger2

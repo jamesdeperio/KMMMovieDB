@@ -3,7 +3,7 @@ package com.github.jamesdeperio.moviedb.viewmodel.home
 import com.github.jamesdeperio.moviedb.model.ui.HomeItem
 
 sealed class HomeState {
-    data class LoadPopularItem(val data: List<HomeItem>): HomeState()
+    data class LoadPopularItem( val data: List<HomeItem>): HomeState()
     data class FailedLoadPopularItem(val throwable: Throwable): HomeState()
 
     data class LoadTopRatedItem(val data: List<HomeItem>): HomeState()

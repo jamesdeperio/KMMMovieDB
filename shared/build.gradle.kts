@@ -35,11 +35,11 @@ kotlin {
                 implementation("io.ktor:ktor-client-auth:1.6.0")
                 implementation("io.ktor:ktor-client-serialization:1.6.0")
                 implementation("ch.qos.logback:logback-classic:1.2.3")
-                implementation("io.ktor:ktor-client-logging:1.6.0")
-                implementation ("io.ktor:ktor-client-auth:1.6.0")
-                implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"){
+                implementation("io.ktor:ktor-client-logging:1.6.1")
+                implementation ("io.ktor:ktor-client-auth:1.6.1")
+                implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt"){
                     version {
-                        strictly("1.5.0")
+                        strictly("1.5.0-native-mt")
                     }
                 }
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
